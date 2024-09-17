@@ -1,0 +1,19 @@
+{
+  "name": "drag-and-drop-project",
+  "version": "1.0.0",
+  "description": "Typescript project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": [
+    "typescript",
+    "course"
+  ],
+  "author": "Pawel Werbowy",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}

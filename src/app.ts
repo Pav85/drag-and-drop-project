@@ -78,6 +78,7 @@ class ProjectList {
     this.element = importedNode.firstElementChild as HTMLElement;
     this.element.id = `${this.type}-projects`;
     this.attach();
+    this.renderContent();
   }
 
   private renderContent() {
@@ -191,3 +192,4 @@ class ProjectInput {
 
 const prjInput = new ProjectInput();
 const activePrjList = new ProjectList("active");
+const finishedPrjList = new ProjectList("finished");

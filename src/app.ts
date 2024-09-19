@@ -1,5 +1,7 @@
-// Validation Logic
+// Project State Management
+class ProjectState {}
 
+// Validation Logic
 interface Validatable {
   value: string | number;
   required?: boolean;

@@ -117,8 +117,8 @@ class ProjectInput {
     };
 
     if (
-      !validate(titleValidatable) &&
-      !validate(descriptionValidatable) &&
+      !validate(titleValidatable) ||
+      !validate(descriptionValidatable) ||
       !validate(peopleValidatable)
     ) {
       alert("Invalid input, please try again!");

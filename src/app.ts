@@ -1,23 +1,10 @@
-/// <reference path=".//drag-and-drop-interfaces.ts" />
-/// <reference path=".//project-model.ts" />
+/// <reference path="./models/drag-and-drop.ts" />
+/// <reference path="./models/project.ts" />
 /// <reference path=".//project-state.ts" />
-/// <reference path=".//validation.ts" />
+/// <reference path="./util/validation.ts" />
+/// <reference path="./decorators/autobind.ts" />
 
 namespace App {
-  // Autobind Decorator
-
-  function Autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
-    const originalMethod = descriptor.value;
-    const adjDescriptor: PropertyDescriptor = {
-      configurable: true,
-      get() {
-        const boundFn = originalMethod.bind(this);
-        return boundFn;
-      },
-    };
-    return adjDescriptor;
-  }
-
   // Component Base Class
   abstract class Component<T extends HTMLElement, U extends HTMLElement> {
     templateElement: HTMLTemplateElement;

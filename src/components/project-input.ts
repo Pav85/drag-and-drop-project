@@ -54,21 +54,22 @@ export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
       max: 5,
     };
 
-    let errorMessage = "";
+    const errors: string[] = [];
 
     if (!validate(titleValidatable)) {
-      errorMessage += "Title is required.\n";
+      errors.push("Title is required.");
     }
     if (!validate(descriptionValidatable)) {
-      errorMessage +=
-        "Description is required and should be at least 5 characters long.\n";
+      errors.push(
+        "Description is required and should be at least 5 characters long."
+      );
     }
     if (!validate(peopleValidatable)) {
-      errorMessage += "Number of people should be between 1 and 5.\n";
+      errors.push("Number of people should be between 1 and 5.");
     }
 
-    if (errorMessage) {
-      alert(errorMessage);
+    if (errors.length > 0) {
+      alert(errors.join("\n"));
       return;
     } else {
       return [enteredTitle, enteredDescription, +enteredPeople];
